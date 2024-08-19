@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .correct { background-color: green; color: white; }
+        .incorrect { background-color: red; color: white; }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
+    <h1 class="text-3xl font-bold mb-6">Quiz Application</h1>
+    <div id="quiz-container" class="w-full max-w-lg bg-white shadow-md rounded-lg p-6">
+        <div id="question-info" class="mb-4 text-lg text-gray-700">
+            <span id="question-number"></span>
+        </div>
+        <div id="question-container" class="mb-4"></div>
+        <div id="options-container" class="mb-4"></div>
+        <button id="next-btn" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="nextQuestion()">Next</button>
+        <button id="restart-btn" class="bg-green-500 text-white px-4 py-2 rounded hidden" onclick="restartQuiz()">Restart</button>
+        <div id="score-container" class="mt-4 text-lg"></div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
